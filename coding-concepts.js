@@ -9,10 +9,16 @@
 // --------------------1) What will this log?
 
 const cohort = "Foxtrot 2023"
-// console.log(cohort.split(""))
+console.log(cohort.split(""))
 
-// a) Your answer:
+// a) Your answer: "F","o","x","t","r","o","t" "2","0","2","3"
 // b) Verify and explain:
+// [
+//   'F', 'o', 'x', 't',
+//   'r', 'o', 't', ' ',
+//   '2', '0', '2', '3'
+// ]
+// This was the actual answer, I believe I had the right idea, that the string would break off into separate strings. I wasn't fully sure if it was going to be double or single quotes so I just went with double. I am seeing though, in the final answer, that it is put into square brackets which would make it an array of all the seperated/split up charaters as the values.
 
 // --------------------2) What will this log?
 
@@ -21,7 +27,7 @@ const greeter = (name) => {
 }
 // console.log(greeter("LEARN Student"))
 
-// a) Your answer:
+// a) Your answer: Hello, LEARN Student!
 // b) Verify and explain:
 
 // --------------------3) What will this log?
@@ -29,7 +35,7 @@ const greeter = (name) => {
 const multipliedByTwo = [4, 5, 6, 7, 8].map((number) => number * 2)
 // console.log(multipliedByTwo)
 
-// a) Your answer:
+// a) Your answer: [8, 10, 12, 14, 16]
 // b) Verify and explain:
 
 // --------------------4) What will this log?
@@ -37,7 +43,7 @@ const multipliedByTwo = [4, 5, 6, 7, 8].map((number) => number * 2)
 const onlyOdds = [11, 12, 13, 14, 15].filter((number) => number % 2 !== 0)
 // console.log(onlyOdds)
 
-// a) Your answer:
+// a) Your answer: [11, 13, 15]
 // b) Verify and explain:
 
 // --------------------5) What will this log?
@@ -50,7 +56,7 @@ const myCodingSkills = {
 }
 // console.log(myCodingSkills.languages[0])
 
-// a) Your answer:
+// a) Your answer: JavaScript
 // b) Verify and explain:
 
 // --------------------STRETCH: What will this log?
@@ -65,5 +71,5 @@ class Learn {
 const learnStudent = new Learn("George")
 // console.log(learnStudent)
 
-// a) Your answer:
+// a) Your answer: George
 // b) Verify and explain:
