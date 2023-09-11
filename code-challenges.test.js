@@ -28,19 +28,19 @@ const numbersArray2 = [24, 27, 30, 33, 36]
 // a) Create a test with expect statements for each of the variables provided.
 
 // Test
-// describe("evenlyDiv", () => {
-//     it("returns if the number inside it is evenly divisible by three or not.", () => {
-//         const object1 = { number: 15 }
-// // Expected output: "15 is divisible by three"
-//         const object2 = { number: 0 }
-// // Expected output: "0 is divisible by three"
-//         const object3 = { number: -7 }
-// // Expected output: "-7 is not divisible by three"
-//         expect(evenlyDiv(object1)).toEqual("15 is divisible by three")
-//         expect(evenlyDiv(object3)).toEqual("-7 is not divisible by three")
-//         expect(evenlyDiv(object2)).toEqual("0 is divisible by three")
-//     })
-// })
+describe("evenlyDiv", () => {
+    it("returns if the number inside it is evenly divisible by three or not.", () => {
+        const object1 = { number: 15 }
+// Expected output: "15 is divisible by three"
+        const object2 = { number: 0 }
+// Expected output: "0 is divisible by three"
+        const object3 = { number: -7 }
+// Expected output: "-7 is not divisible by three"
+        expect(evenlyDiv(object1)).toEqual("15 is divisible by three")
+        expect(evenlyDiv(object3)).toEqual("-7 is not divisible by three")
+        expect(evenlyDiv(object2)).toEqual("0 is divisible by three")
+    })
+})
 // // output:  Good Failure ReferenceError: evenlyDiv is not defined
 
 
@@ -73,16 +73,16 @@ const evenlyDiv = (object) => {
 // a) Create a test with expect statements for each of the variables provided.
 
 // Test 
-// describe("capArray", () => {
-//     it("an array with all the words capitalized", () => {
-//         const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
-// // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
-//         const randomNouns2 = ["temperature", "database", "chopsticks", "mango"]
-// // Expected output: ["Temperature", "Database", "Chopsticks", "Mango"]
-//         expect(capArray(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
-//         expect(capArray(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango"])
-//     })
-// })
+describe("capArray", () => {
+    it("an array with all the words capitalized", () => {
+        const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+// Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
+        const randomNouns2 = ["temperature", "database", "chopsticks", "mango"]
+// Expected output: ["Temperature", "Database", "Chopsticks", "Mango"]
+        expect(capArray(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+        expect(capArray(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango"])
+    })
+})
 // Output: good failure ReferenceError: capArray is not defined
 
 const randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
@@ -112,19 +112,19 @@ const capArray = (array) => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
-// describe("vowelIndex", () => {
-//     it("logs the index of the first vowel", () => {
-//         const vowelTester1 = "learn"
-//         // Expected output: 1
-//         const vowelTester2 = "academy"
-//         // Expected output: 0
-//         const vowelTester3 = "challenges"
-//         // Expected output: 2
-//         expect(vowelIndex(vowelTester1)).toEqual(1)
-//         expect(vowelIndex(vowelTester2)).toEqual(0)
-//         expect(vowelIndex(vowelTester3)).toEqual(2)
-//     })
-// })
+describe("vowelIndex", () => {
+    it("logs the index of the first vowel", () => {
+        const vowelTester1 = "learn"
+        // Expected output: 1
+        const vowelTester2 = "academy"
+        // Expected output: 0
+        const vowelTester3 = "challenges"
+        // Expected output: 2
+        expect(vowelIndex(vowelTester1)).toEqual(1)
+        expect(vowelIndex(vowelTester2)).toEqual(0)
+        expect(vowelIndex(vowelTester3)).toEqual(2)
+    })
+})
 //output: good failure ReferenceError: vowelIndex is not defined
 
 const vowelTester1 = "learn"
@@ -142,11 +142,17 @@ const vowelTester3 = "challenges"
 // Output: a number of the index
 // process: make a function, use either .indexOf or .index and .includes to collect the index of the vowel of the string
 
-const vowelIndex = (number, index) => {
+const vowelIndex = (number) => {
     for(let i = 0; i < number.length; i++){
-        return number.indexOf("a", "e", "i", "o", "u") 
+        if("aeiou".includes(number[i])){
+            // some of my trials
+        // return number.indexOf("a", "e", "i", "o", "u") 
+        // } if(vowelIndex == "a" || vowelIndex == "e"){
+        return(i)
+        }
     }
 }
         
+// Output: PASS  ./code-challenges.test.js
 
-console.log(vowelIndex(vowelTester1))
+// used console.log(vowelIndex(vowelTester1)) to help ifgure out if it worked
